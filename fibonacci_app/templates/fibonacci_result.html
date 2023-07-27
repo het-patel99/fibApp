@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Fibonacci Number Result{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">First {{ input_number }} Fibonacci Numbers: </h3>
+            </div>
+            <div class="card-body">
+                <p class="mb-0">Fibonacci Sequence: {{ fibonacci_sequence|join:', ' }}</p>
+                <a href="{% url 'fibonacci_form' %}" class="btn btn-primary mt-3">Go back</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

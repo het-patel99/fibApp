@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Fibonacci Number Web Application{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Fibonacci Number Web Application</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="n">Enter the value of n:</label>
+                        <input type="number" class="form-control" id="n" name="n" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get Fibonacci Numbers</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
